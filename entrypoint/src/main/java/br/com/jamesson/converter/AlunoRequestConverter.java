@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class AlunoRequestConverter {
 
     public Aluno toAluno(AlunoRequest alunoRequest){
-        return new Aluno((alunoRequest.getName()));
+        return Aluno.from((alunoRequest.getName()));
     }
 
 }

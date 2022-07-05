@@ -6,6 +6,8 @@ import br.com.jamesson.repository.entity.AlunoEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class AlunoRepositoryImpl implements AlunoRepository {
 
@@ -15,5 +17,10 @@ public class AlunoRepositoryImpl implements AlunoRepository {
     @Override
     public void save(Aluno aluno) {
         alunoDao.save(AlunoEntity.from(aluno));
+    }
+
+    @Override
+    public List<Aluno> list() {
+        return AlunoEntity.from(alunoDao.findAll());
     }
 }

@@ -4,7 +4,7 @@ import br.com.jamesson.aluno.entity.Aluno;
 
 import java.util.List;
 
-public interface AlunoRepository {
+public interface RegistroAlunoBorda {
 
     void save(Aluno aluno);
 
